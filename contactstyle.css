@@ -1,0 +1,158 @@
+body {
+  font-family:'Times New Roman', Times, serif;
+  margin-top: auto;
+  color:white;
+  text-align: center;
+  padding-top: 80px;
+ } 
+
+ @keyframes LeftToRigth {
+    0%{
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100%{
+      transform: translateY(0);
+      opacity: 1;
+    }
+ }
+
+ .contact{
+    animation: LeftToRigth 1.3s ease-out forwards !important;
+    position: relative;
+ }
+
+ p{
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+@keyframes BottomToTop {
+  0%{
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Style the container to align items */
+.imp-container {
+  display: flex; /* Use flexbox for alignment */
+  flex-wrap: wrap; /* Allow wrapping for multiple rows */
+  gap: 280px; /* Space between items */
+  justify-content: center; /* Center items in the container */
+}
+
+/* Individual items (circle + text) */
+.imp-item {
+  text-align: center; /* Center align circle and text */
+  width: 120px; /* Set a fixed width for each item */
+}
+
+.imp {
+  animation: BottomToTop 1.3s ease-out !important;
+  position: relative;
+  display: inline-flex; /* Center icon in the circle */
+  justify-content: center;
+  align-items: center;
+  width: 140px; 
+  height: 140px;
+  background-color: #3bb6c6; 
+  border-radius: 50%; 
+  margin: 0 auto 10px auto; 
+}
+
+/* Icon inside the circle */
+.imp img {
+  width: 50%; 
+  height: 50%;
+  object-fit: contain; /* Keep icon aspect ratio */
+}
+
+.imp-item h3 {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.map-container {
+  margin: 0; 
+  padding: 0;
+  width: 100%; /* Make it responsive */
+  max-width: 700px; /* Limit the maximum width */
+  margin:auto; /* Center the map on the page */
+  overflow: hidden; /* Prevent iframe overflow */
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 350px; /* Adjust height as needed */
+  border: none; /* Remove default iframe border */
+}
+
+/* For tablets and below (max-width 768px) */
+@media (max-width: 768px) {
+  .imp-container {
+    gap: 50px; /* Reduce gap between circles */
+  }
+
+  .imp {
+    width: 120px; /* Reduce circle size */
+    height: 120px;
+  }
+
+  .imp img {
+    width: 40%; /* Adjust icon size inside the circle */
+    height: 40%;
+  }
+
+  .imp-item h3 {
+    font-size: 14px; /* Smaller text */
+  }
+
+  .map-container iframe {
+    height: 300px; /* Adjust map height */
+  }
+
+  p {
+    font-size: 16px; /* Reduce paragraph font size */
+  }
+}
+
+/* For phones (screen width 480px and below) */
+@media (max-width: 480px) {
+  .imp-container {
+    flex-direction: column; /* Stack items vertically */
+    gap: 30px; /* Reduce gap further */
+    align-items: center; /* Center items horizontally */
+    padding: 10px;
+  }
+
+  .imp {
+    width: 100px; /* Smaller circle size */
+    height: 100px;
+  }
+
+  .imp img {
+    width: 30%; /* Smaller icon size */
+    height: 30%;
+  }
+
+  .imp-item h3 {
+    font-size: 12px; /* Reduce text size */
+  }
+
+  .map-container iframe {
+    height: 250px; /* Further adjust map height */
+  }
+
+  p {
+    font-size: 14px; /* Smaller paragraph font size */
+  }
+}
+  p {
+    font-size: 14px; /* Smaller paragraph font size */
+  }

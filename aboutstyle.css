@@ -1,0 +1,158 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  padding-top: 60px; /* Adjusted to avoid extra space */
+  background-color: #000; /* Background for better visibility */
+  overflow-x: hidden; /* Prevent horizontal scroll on small screens */
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 0 10px; /* Add padding for better readability on smaller screens */
+}
+
+/* Service Container */
+.service-container {
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
+  margin: 20px auto; 
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.service {
+  max-width: 300px;
+  border: 1px solid #1f1f1f;
+  height: 180px ; /* Make height flexible for dynamic content */
+  padding: 15px;
+  text-align: center;
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.service:hover {
+  background: linear-gradient(135deg, #8b001f, #e7003a, #4b0012);
+}
+@keyframes slideInLeftToRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0; 
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1; 
+  }
+}
+
+@keyframes slideInRightToLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0; 
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1; 
+  }
+}
+
+/* Animations */
+.about {
+  animation: slideInLeftToRight 1.3s ease-out forwards;
+  position: relative;
+  margin: 0 auto; /* Center the about section */
+  padding: 20px; /* Ensure proper padding for responsiveness */
+  text-align: center; /* Center align content */
+}
+
+.why {
+  animation: slideInRightToLeft 1.3s ease-out forwards;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive Styles */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  body {
+    padding-top: 50px; /* Adjust spacing for mobile header */
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .service-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    padding: 10px; /* Add spacing for smaller screens */
+  }
+
+  .service {
+    max-width: 90%; /* Adjust width for tablets */
+    margin-bottom: 20px;
+    padding: 20px; /* Increase padding for better content spacing */
+  }
+  .about {
+    animation: slideInLeftToRight 1s ease-out forwards; /* Simplified animation */
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .why {
+    animation: slideInRightToLeft 1s ease-out forwards; /* Simplified animation */
+    padding: 10px;
+    margin: 10px auto;
+  }
+}
+
+
+/* Phones (480px and below) */
+@media (max-width: 480px) {
+  body {
+    padding-top: 40px; /* Adjust header spacing for smaller devices */
+  }
+
+  p {
+    font-size: 14px; /* Smaller font for readability */
+    line-height: 1.4;
+    padding: 0 5px; /* Add padding for edge alignment */
+  }
+
+  .service-container {
+    flex-direction: column; /* Stack services vertically */
+    align-items: center;
+    gap: 10px; /* Add spacing between items */
+    padding: 5px; /* Reduce padding for smaller screens */
+  }
+
+  .service {
+    max-width: 100%; /* Take full screen width */
+    padding: 10px; /* Adjust padding */
+    text-align: center;
+    height: auto; /* Adapt height to content */
+  }
+  
+  .about {
+    animation: slideInLeftToRight 1s ease-out forwards; /* Keep animation */
+    margin: 5px auto; /* Reduce top/bottom margins */
+    padding: 10px; /* Adjust padding */
+    text-align: center;
+    font-size: 16px; /* Scale font size down */
+  }
+
+  .why {
+    animation: slideInRightToLeft 1s ease-out forwards; /* Keep animation */
+    margin: 5px auto;
+    padding: 10px;
+  }
+}
